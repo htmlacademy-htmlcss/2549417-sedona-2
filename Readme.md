@@ -2,6 +2,7 @@
 
 * Студент: [Сергей Кондратьев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2549417).
 * Наставник: [Станислав Михайлов](https://htmlacademy.ru/profile/id139638).
+* Проект сайта: [Мой проект сайта Седона](https://renin56.github.io/2549417-sedona-2/)
 
 ---
 
