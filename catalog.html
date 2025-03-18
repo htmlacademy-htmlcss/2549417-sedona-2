@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="type-house">
-                  <h3 class="criterion-title">Тип жилья:</h3>
+                  <h3 class="criterion-title">Тип Жилья:</h3>
                   <ul class="control-list">
                     <li class="control-item">
                       <label class="control" for="hotel">
@@ -112,27 +112,30 @@
                   </ul>
                 </div>
 
-                <div class="price-hotel">
-                  <h3 class="criterion-title">Стоимость, ₽:</h3>
-                  <div class="input-price">
-                    <label class="control-label-min" for="min-price">от</label>
-                    <input class="control-input price-input radius-left" type="number" name="min-price" id="min-price" value="0">
-                    <label class="control-label-max" for="max-price">до</label>
-                    <input class="control-input price-input radius-right" type="number" name="max-price" id="max-price" value="9000">
-                  </div>
-                  <div class="range">
-                    <div class="price-min-max-fon"></div>
-                    <div class="price-min-max"></div>
-                    <button class="control-button minprice" type="button"><span class="visually-hidden">Минимальная
-                        цена</span></button>
-                    <button class="control-button maxprice" type="button"><span class="visually-hidden">Максимальная
-                        цена</span></button>
-                  </div>
-                </div>
+                <div class="container-form-filter">
+                  <div class="price-hotel">
+                    <h3 class="criterion-title">Стоимость, ₽:</h3>
+                    <div class="input-price">
+                      <label class="control-label-min" for="min-price">от</label>
+                      <input class="control-input price-input radius-left" type="number" name="min-price" id="min-price" value="0">
+                      <label class="control-label-max" for="max-price">до</label>
+                      <input class="control-input price-input radius-right" type="number" name="max-price" id="max-price" value="9000">
+                    </div>
 
-                <div class="button-form">
-                  <button class="button select-btn" type="submit">Применить</button>
-                  <button class="button clear-btn" type="reset">Сбросить</button>
+                    <div class="range">
+                      <div class="price-min-max-fon"></div>
+                      <div class="price-min-max"></div>
+                      <button class="control-button minprice" type="button"><span class="visually-hidden">Минимальная
+                          цена</span></button>
+                      <button class="control-button maxprice" type="button"><span class="visually-hidden">Максимальная
+                          цена</span></button>
+                    </div>
+                  </div>
+
+                  <div class="button-form">
+                    <button class="button select-btn" type="submit">Применить</button>
+                    <button class="button clear-btn" type="reset">Сбросить</button>
+                  </div>
                 </div>
               </form>
             </div>
@@ -178,7 +181,7 @@
           <ul class="hotel-card-list">
             <li class="hotel-card-item">
               <a class="hotel-card-link-img" href="#">
-                <img class="preview" src="./images/content/amara-resourt-and-spa.jpg" width="300" height="206" alt="">
+                <img class="preview" src="./images/content/amara-resourt-and-spa.jpg" width="300" height="212" alt="">
                 <h3 class="hotel-name">Amara Resort & Spa</h3>
               </a>
               <p class="price">
@@ -202,7 +205,7 @@
 
             <li class="hotel-card-item">
               <a class="hotel-card-link-img" href="#">
-                <img class="preview" src="./images/content/villas-at-poco-diablo.jpg" width="300" height="206" alt="">
+                <img class="preview" src="./images/content/villas-at-poco-diablo.jpg" width="300" height="212" alt="">
                 <h3 class="hotel-name">Villas at Poco Diablo</h3>
               </a>
               <p class="price">
@@ -226,7 +229,7 @@
 
             <li class="hotel-card-item">
               <a class="hotel-card-link-img" href="#">
-                <img class="preview" src="./images/content/desert-quail-inn.jpg" width="300" height="206" alt="">
+                <img class="preview" src="./images/content/desert-quail-inn.jpg" width="300" height="212" alt="">
                 <h3 class="hotel-name">Desert Quail Inn</h3>
               </a>
               <p class="price">
@@ -249,7 +252,7 @@
 
             <li class="hotel-card-item">
               <a class="hotel-card-link-img" href="#">
-                <img class="preview" src="./images/content/greentree-inn.jpg" width="300" height="206" alt="">
+                <img class="preview" src="./images/content/greentree-inn.jpg" width="300" height="212" alt="">
                 <h3 class="hotel-name">GreenTree Inn</h3>
               </a>
               <p class="price">
@@ -277,6 +280,7 @@
       </div>
 
       <section class="pagination-block">
+        <h2 class="visually-hidden">Навигация по страницам сайта</h2>
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>

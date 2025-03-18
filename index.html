@@ -4,47 +4,48 @@
     <meta charset="utf-8">
     <title>Седона - городок в Аризоне</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link type="Image/x-icon" href="/favicon1.svg" rel="icon">
   </head>
   <body>
     <div class="container">
-    <header class="page-header">
-      <div class="navigation-container">
-        <a class="back-to-main">
-          <img class="logo" src="./images/content/logo.svg" width="140" height="64" alt="Логотип города Седона">
-        </a>
-        <nav class="navigation">
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link navigation-link-current">Главная</a>
+      <header class="page-header">
+        <div class="navigation-container">
+          <a class="back-to-main">
+            <img class="logo" src="./images/content/logo.svg" width="140" height="64" alt="Логотип города Седона">
+          </a>
+          <nav class="navigation">
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link navigation-link-current">Главная</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">О Седоне</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="navigation-user">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link navigation-search" href="#">
+                <span class="visually-hidden">Поиск</span>
+              </a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">О Седоне</a>
+            <li class="navigation-user-item">
+              <a class="navigation-user-link navigation-favorites" href="#">
+                <span class="visually-hidden">В избранное добавлено гостиниц</span>
+                <p class="count-block">
+                  <span class="navigation-user-count">12</span>
+                </p>
+              </a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <li class="navigation-user-item">
+              <a class="button" href="catalog.html">Хочу сюда!</a>
             </li>
           </ul>
-        </nav>
-
-        <ul class="navigation-user">
-          <li class="navigation-user-item">
-            <a class="navigation-user-link navigation-search" href="#">
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link navigation-favorites" href="#">
-              <span class="visually-hidden">В избранное добавлено гостиниц</span>
-              <p class="count-block">
-                <span class="navigation-user-count">12</span>
-              </p>
-            </a>
-          </li>
-          <li class="navigation-user-item">
-            <a class="button" href="catalog.html">Хочу сюда!</a>
-          </li>
-        </ul>
-      </div>
+        </div>
     </header>
 
     <main class="page-main">
@@ -70,7 +71,7 @@
               <hr class="hr-light">
               <p class="advantages-description-width">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="advantages-img" src="./images/content/photo-1.jpg" width="800" height="384" alt="Здание с флагом">
+            <img class="advantages-img" src="./images/content/photo-1.jpg" width="800" height="385" alt="Здание с флагом">
           </li>
 
           <li class="advantages-item-number">
@@ -98,9 +99,9 @@
           </li>
 
           <li class="advantages-item-width item-night">
-            <img class="advantages-img" src="./images/content/photo-2.jpg" width="800" height="384" alt="Мост дьявола">
+            <img class="advantages-img" src="./images/content/photo-2.jpg" width="800" height="385" alt="Мост дьявола">
             <div class="advantage-container-width reverse">
-              <h3 class="advantages-title-width">Там есть мост дьявола</h3>
+              <h3 class="advantages-title-width">Там есть <br> мост дьявола</h3>
               <hr class="hr-light">
               <p class="advantages-description-width">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
@@ -108,10 +109,8 @@
         </ul>
 
         <section class="invitation">
-          <div class="container-invitation">
-            <h2 class="invitation-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-            <p class="invitation-description">Опытный персонал и качественное обслуживание!</p>
-          </div>
+          <h2 class="invitation-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+          <p class="invitation-description">Опытный персонал и качественное обслуживание!</p>
         </section>
 
         <section class="container-comfort">
@@ -145,7 +144,7 @@
             <a class="button search-hotel-link" href="catalog.html">Поиск гостиницы в Седоне</a>
           </div>
         </section>
-
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -164,6 +163,7 @@
       </section>
 
       <section class="footer-contacts">
+        <h2 class="visually-hidden">Подвал сайта с контактами</h2>
         <div class="container-contacts">
           <section class="social">
             <h2 class="visually-hidden social-title">Мы в социальных сетях</h2>
