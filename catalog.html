@@ -10,7 +10,7 @@
     <header class="page-header">
       <div class="navigation-container">
         <a class="back-to-main" href="index.html">
-          <img class="logo" src="./images/content/logo.svg" width="140" height="64" alt="Логотип города Седона">
+          <img class="logo" src="./images/content/logo.svg" width="140" height="70" alt="Логотип города Седона">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -29,12 +29,12 @@
         <ul class="navigation-user">
           <li class="navigation-user-item">
             <a class="navigation-user-link navigation-search" href="#">
-              <span class="visually-hidden">Поиск</span>
+              <span class="visually-hidden">Поиск.</span>
             </a>
           </li>
           <li class="navigation-user-item">
             <a class="navigation-user-link navigation-favorites" href="#">
-              <span class="visually-hidden">В избранное добавлено гостиниц</span>
+              <span class="visually-hidden">В избранное добавлено гостиниц.</span>
               <p class="count-block">
                 <span class="navigation-user-count">12</span>
               </p>
@@ -53,123 +53,120 @@
         <div class="container-filter">
           <div class="filter-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
-            <ul class="breadcrumbs">
-              <li class="breadcrumbs-home">
+            <ul class="breadcrumbs-list">
+              <li class="breadcrumbs-item">
                 <a class="breadcrumbs-main-page" href="index.html">
                   <span class="visually-hidden">Главная страница</span>
                 </a>
               </li>
-              <li class="breadcrumbs-next"></li>
-              <li class="breadcrumbs-catalog">
-                <a class="catalog" href="#">Гостиницы</a>
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-catalog" href="#">Гостиницы</a>
               </li>
             </ul>
           </div>
 
           <section class="hotel-filter">
-            <h2 class="visually-hidden">Фильтр гостиниц</h2>
-            <div class="container-criterion">
-              <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-                <div class="infrastructure">
-                  <h3 class="criterion-title">Инфраструктура:</h3>
-                  <ul class="control-list">
-                    <li class="control-item">
-                      <label class="control" for="pool">
-                        <input class="control-checkbox checkbox-indicator" type="checkbox" name="pool" id="pool" checked>Бассейн
-                      </label>
-                    </li>
-                    <li class="control-item">
-                      <label class="control" for="parking">
-                        <input class="control-checkbox checkbox-indicator" type="checkbox" name="parking" id="parking" checked>Парковка
-                      </label>
-                    </li>
-                    <li class="control-item">
-                      <label class="control" for="wifi">
-                        <input class="control-checkbox checkbox-indicator" type="checkbox" name="wifi" id="wifi">Wi-Fi
-                      </label>
-                    </li>
-                  </ul>
-                </div>
+            <h2 class="visually-hidden">Фильтр гостиниц.</h2>
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+              <div class="infrastructure">
+                <h3 class="criterion-title">Инфраструктура:</h3>
+                <ul class="control-list">
+                  <li class="control-item">
+                    <label class="control" for="pool">
+                      <input class="control-checkbox checkbox-indicator" type="checkbox" name="pool" id="pool" checked>Бассейн
+                    </label>
+                  </li>
+                  <li class="control-item">
+                    <label class="control" for="parking">
+                      <input class="control-checkbox checkbox-indicator" type="checkbox" name="parking" id="parking" checked>Парковка
+                    </label>
+                  </li>
+                  <li class="control-item">
+                    <label class="control" for="wifi">
+                      <input class="control-checkbox checkbox-indicator" type="checkbox" name="wifi" id="wifi">Wi-Fi
+                    </label>
+                  </li>
+                </ul>
+              </div>
 
-                <div class="type-house">
-                  <h3 class="criterion-title">Тип Жилья:</h3>
-                  <ul class="control-list">
-                    <li class="control-item">
-                      <label class="control" for="hotel">
-                        <input class="control-radiobutton radio-indicator" type="radio" name="housing-type" value="hotel" id="hotel" checked>Гостиница
-                      </label>
-                    </li>
-                    <li class="control-item">
-                      <label class="control" for="motel">
-                        <input class="control-radiobutton radio-indicator" type="radio" name="housing-type" value="motel" id="motel">Мотель
-                      </label>
-                    </li>
-                    <li class="control-item">
-                      <label class="control" for="apartaments">
-                        <input class="control-radiobutton radio-indicator" type="radio" name="housing-type" value="apartaments" id="apartaments">Апартаменты
-                      </label>
-                    </li>
-                  </ul>
-                </div>
+              <div class="type-house">
+                <h3 class="criterion-title">Тип Жилья:</h3>
+                <ul class="control-list">
+                  <li class="control-item">
+                    <label class="control" for="hotel">
+                      <input class="control-radiobutton radio-indicator" type="radio" name="housing-type" value="hotel" id="hotel" checked>Гостиница
+                    </label>
+                  </li>
+                  <li class="control-item">
+                    <label class="control" for="motel">
+                      <input class="control-radiobutton radio-indicator" type="radio" name="housing-type" value="motel" id="motel">Мотель
+                    </label>
+                  </li>
+                  <li class="control-item">
+                    <label class="control" for="apartaments">
+                      <input class="control-radiobutton radio-indicator" type="radio" name="housing-type" value="apartaments" id="apartaments">Апартаменты
+                    </label>
+                  </li>
+                </ul>
+              </div>
 
-                <div class="container-form-filter">
-                  <div class="price-hotel">
-                    <h3 class="criterion-title">Стоимость, ₽:</h3>
-                    <div class="input-price">
-                      <label class="control-label-min" for="min-price">от</label>
-                      <input class="control-input price-input radius-left" type="number" name="min-price" id="min-price" value="0">
-                      <label class="control-label-max" for="max-price">до</label>
-                      <input class="control-input price-input radius-right" type="number" name="max-price" id="max-price" value="9000">
-                    </div>
-
-                    <div class="range">
-                      <div class="price-min-max-fon"></div>
-                      <div class="price-min-max"></div>
-                      <button class="control-button minprice" type="button"><span class="visually-hidden">Минимальная
-                          цена</span></button>
-                      <button class="control-button maxprice" type="button"><span class="visually-hidden">Максимальная
-                          цена</span></button>
-                    </div>
+              <div class="container-form-filter">
+                <div class="price-hotel">
+                  <h3 class="criterion-title">Стоимость, ₽:</h3>
+                  <div class="input-price">
+                    <label class="control-label-min" for="min-price">от</label>
+                    <input class="control-input price-input radius-left" type="number" name="min-price" id="min-price" value="0">
+                    <label class="control-label-max" for="max-price">до</label>
+                    <input class="control-input price-input radius-right" type="number" name="max-price" id="max-price" value="9000">
                   </div>
 
-                  <div class="button-form">
-                    <button class="button select-btn" type="submit">Применить</button>
-                    <button class="button clear-btn" type="reset">Сбросить</button>
+                  <div class="range">
+                    <div class="price-min-max-fon"></div>
+                    <div class="price-min-max"></div>
+                    <button class="control-button minprice" type="button"><span class="visually-hidden">Минимальная
+                        цена</span></button>
+                    <button class="control-button maxprice" type="button"><span class="visually-hidden">Максимальная
+                        цена</span></button>
                   </div>
                 </div>
-              </form>
-            </div>
+
+                <div class="button-form">
+                  <button class="button select-btn" type="submit">Применить</button>
+                  <button class="button clear-btn" type="reset">Сбросить</button>
+                </div>
+              </div>
+            </form>
           </section>
         </div>
       </section>
 
       <section class="search-list">
-        <h2 class="visually-hidden">Параметры сортировки гостиниц</h2>
+        <h2 class="visually-hidden">Параметры сортировки гостиниц.</h2>
         <div class="sorted">
           <p class="count-search">Найдено гостиниц: <span class="count">38</span></p>
 
           <div class="type-sorted">
 
             <select class="rating-sorted" aria-label="Сортировка">
-              <option value="cheap">Сначало дешёвые</option>
-              <option value="expensive">Сначало дорогие</option>
-              <option value="popular">Сначало популярные</option>
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
             </select>
 
             <ul class="visible-card-list">
               <li class="visible-card-item">
                 <button class="button button-sorted card button-selected">
-                  <span class="visually-hidden">Показать карточки</span>
+                  <span class="visually-hidden">Показать карточки.</span>
                 </button>
               </li>
               <li class="visible-card-item">
                 <button class="button button-sorted slideshow">
-                  <span class="visually-hidden">Показать по одной</span>
+                  <span class="visually-hidden">Показать по одной.</span>
                 </button>
               </li>
               <li class="visible-card-item">
                 <button class="button button-sorted list">
-                  <span class="visually-hidden">Показать список</span>
+                  <span class="visually-hidden">Показать список.</span>
                 </button>
               </li>
             </ul>
@@ -177,7 +174,7 @@
         </div>
 
         <section class="card-result-hotel">
-          <h2 class="visually-hidden">Результат поиска гостиниц</h2>
+          <h2 class="visually-hidden">Результат поиска гостиниц.</h2>
           <ul class="hotel-card-list">
             <li class="hotel-card-item">
               <a class="hotel-card-link-img" href="#">
@@ -273,34 +270,30 @@
             </li>
           </ul>
         </section>
-      </section>
 
-      <div class="horizont">
-        <div class="line"></div>
-      </div>
-
-      <section class="pagination-block">
-        <h2 class="visually-hidden">Навигация по страницам сайта</h2>
-        <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
-          </li>
-          <li class="pagination-item button-null">
-            <a class="pagination-link button-null">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-last" href="#">10</a>
-          </li>
-        </ul>
+        <section class="pagination-block">
+          <h2 class="visually-hidden">Навигация по страницам сайта.</h2>
+          <ul class="pagination">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li class="pagination-item button-null">
+              <a class="pagination-link button-null">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-last" href="#">10</a>
+            </li>
+          </ul>
+        </section>
       </section>
     </main>
 
@@ -323,7 +316,7 @@
       <div class="footer-contacts">
         <div class="container-contacts">
           <section class="social">
-            <h2 class="visually-hidden social-title">Мы в социальных сетях</h2>
+            <h2 class="visually-hidden">Мы в социальных сетях.</h2>
             <ul class="social-list">
               <li class="social-item">
                 <a class="social-link vkontakte" href="https://vk.com/htmlacademy">
@@ -391,7 +384,7 @@
               <path
                 d="M109.4 27.0001L105.8 18.1001H103.6L108.4 29.7001C108.1 30.6001 107.7 30.9001 106.7 30.9001H104.2V32.9001H106.7C108.5 32.9001 109.5 32.1001 110.2 30.3001L114.9 18.1001H112.8L109.4 27.0001Z"/>
             </svg>
-            <span class="visually-hidden">Разработчик html academy</span>
+            <span class="visually-hidden">Разработчик html academy.</span>
           </a>
         </div>
       </div>
