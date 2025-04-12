@@ -10,23 +10,22 @@
 
   <body>
     <div class="page-container">
-
       <header class="page-header" data-test="header">
         <div class="page-navigation-container">
-          <a class="page-logo" href="./index.html">
-            <img class="logo" src="./images/content/logo.svg" width="140" height="70" alt="Логотип города Седона">
+          <a class="page-navigation-logo" href="./index.html">
+            <img class="page-logo" src="./images/content/logo.svg" width="140" height="70" alt="Логотип города Седона">
           </a>
 
           <nav>
-            <ul class="page-main-navigation-list">
+            <ul class="navigation-list">
               <li>
-                <a class="page-main-navigation-link" href="./index.html">Главная</a>
+                <a class="navigation-link" href="./index.html">Главная</a>
               </li>
               <li>
-                <a class="page-main-navigation-link" href="#">О Седоне</a>
+                <a class="navigation-link" href="#">О Седоне</a>
               </li>
               <li>
-                <a class="page-main-navigation-link navigation-link-current">Гостиницы</a>
+                <a class="navigation-link navigation-link-current">Гостиницы</a>
               </li>
             </ul>
           </nav>
@@ -53,8 +52,7 @@
       </header>
 
       <main class="page-inner" data-test="main">
-
-        <section class="filter" data-test="filter">
+        <section class="filter">
           <div class="container-filter">
             <div class="filter-header">
               <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -70,7 +68,7 @@
               </ul>
             </div>
 
-            <section class="hotel-filter">
+            <section class="hotel-filter" data-test="filter">
               <h2 class="visually-hidden">Фильтр гостиниц.</h2>
               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="infrastructure">
@@ -78,17 +76,20 @@
                   <ul class="control-list">
                     <li class="control-item">
                       <label class="control" for="pool">
-                        <input class="control-checkbox" type="checkbox" name="pool" id="pool" checked disabled>Бассейн
+                        <input class="control-checkbox" type="checkbox" name="pool" id="pool" checked>
+                        <span>Бассейн</span>
                       </label>
                     </li>
                     <li class="control-item">
                       <label class="control" for="parking">
-                        <input class="control-checkbox" type="checkbox" name="parking" id="parking" checked>Парковка
+                        <input class="control-checkbox" type="checkbox" name="parking" id="parking" checked>
+                        <span>Парковка</span>
                       </label>
                     </li>
                     <li class="control-item">
                       <label class="control" for="wifi">
-                        <input class="control-checkbox" type="checkbox" name="wifi" id="wifi">Wi-Fi
+                        <input class="control-checkbox" type="checkbox" name="wifi" id="wifi">
+                        <span>Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -99,17 +100,20 @@
                   <ul class="control-list">
                     <li class="control-item">
                       <label class="control" for="hotel">
-                        <input class="control-radiobutton" type="radio" name="housing-type" value="hotel" id="hotel" checked>Гостиница
+                        <input class="control-radiobutton" type="radio" name="housing-type" value="hotel" id="hotel" checked>
+                        <span>Гостиница</span>
                       </label>
                     </li>
                     <li class="control-item">
                       <label class="control" for="motel">
-                        <input class="control-radiobutton" type="radio" name="housing-type" value="motel" id="motel">Мотель
+                        <input class="control-radiobutton" type="radio" name="housing-type" value="motel" id="motel">
+                        <span>Мотель</span>
                       </label>
                     </li>
                     <li class="control-item">
                       <label class="control" for="apartaments">
-                        <input class="control-radiobutton" type="radio" name="housing-type" value="apartaments" id="apartaments">Апартаменты
+                        <input class="control-radiobutton" type="radio" name="housing-type" value="apartaments" id="apartaments">
+                        <span>Апартаменты</span>
                       </label>
                     </li>
                   </ul>
@@ -281,11 +285,8 @@
             </ul>
           </section>
         </section>
-      </main>
 
-
-      <footer class="page-footer">
-        <section class="subscription">
+        <section class="subscription" data-test="subscribe">
           <div class="container-subscription">
             <h2 class="subscription-title">Подпишитесь на рассылку</h2>
             <p class="subscription-description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
@@ -298,7 +299,9 @@
             </form>
           </div>
         </section>
+      </main>
 
+      <footer class="page-footer" data-test="footer">
         <section class="footer-contacts">
           <div class="container-contacts">
             <div class="social">
@@ -389,15 +392,51 @@
             <form class="search-parameters" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="time-period">
                 <legend class="visually-hidden">Время заезда.</legend>
-                <label class="search-input-title start-date" for="date-start">
-                  Дата Заезда:
-                </label>
-                <input class="search-input-date start-date-input" name="date-start" id="date-start" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
+                <label class="search-input-title start-date" for="date-start">Дата Заезда:</label>
+                <div class="container-start-date">
+                  <input class="search-input-date start-date-input" name="date-start" id="date-start" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
+                  <span class="input-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g>
+                      <path d="M7.75 12C8.05 12 8.25 11.8 8.25 11.5C8.25 11.2 8.05 11 7.75 11C7.45 11 7.25 11.2 7.25 11.5C7.25 11.8 7.45 12 7.75 12Z" fill="black"/>
+                      <path d="M17 4H15V2H14V4H6V2H5V4H3C2.4 4 2 4.4 2 5V16C2 16.5 2.4 17 3 17H17C17.5 17 18 16.5 18 16V5C18 4.4 17.5 4 17 4ZM17 16H3V9H17V16ZM3 8V5H5V7H6V5H14V7H15V5H17V8H3Z" fill="black"/>
+                      <path d="M10 12C10.3 12 10.5 11.8 10.5 11.5C10.5 11.2 10.3 11 10 11C9.7 11 9.5 11.2 9.5 11.5C9.5 11.8 9.7 12 10 12Z" fill="black"/>
+                      <path d="M12.25 12C12.55 12 12.75 11.8 12.75 11.5C12.75 11.2 12.55 11 12.25 11C11.95 11 11.75 11.2 11.75 11.5C11.75 11.8 11.95 12 12.25 12Z" fill="black"/>
+                      <path d="M7.75 13C7.45 13 7.25 13.2 7.25 13.5C7.25 13.8 7.45 14 7.75 14C8.05 14 8.25 13.8 8.25 13.5C8.25 13.2 8.05 13 7.75 13Z" fill="black"/>
+                      <path d="M5.5 12C5.8 12 6 11.8 6 11.5C6 11.2 5.8 11 5.5 11C5.2 11 5 11.2 5 11.5C5 11.8 5.2 12 5.5 12Z" fill="black"/>
+                      <path d="M5.5 13C5.2 13 5 13.2 5 13.5C5 13.8 5.2 14 5.5 14C5.8 14 6 13.8 6 13.5C6 13.2 5.8 13 5.5 13Z" fill="black"/>
+                      <path d="M10 13C9.7 13 9.5 13.2 9.5 13.5C9.5 13.8 9.7 14 10 14C10.3 14 10.5 13.8 10.5 13.5C10.5 13.2 10.3 13 10 13Z" fill="black"/>
+                      <path d="M12.25 13C11.95 13 11.75 13.2 11.75 13.5C11.75 13.8 11.95 14 12.25 14C12.55 14 12.75 13.8 12.75 13.5C12.75 13.2 12.55 13 12.25 13Z" fill="black"/>
+                      <path d="M14.5 12C14.8 12 15 11.8 15 11.5C15 11.2 14.8 11 14.5 11C14.2 11 14 11.2 14 11.5C14 11.8 14.2 12 14.5 12Z" fill="black"/>
+                      <path d="M14.5 13C14.2 13 14 13.2 14 13.5C14 13.8 14.2 14 14.5 14C14.8 14 15 13.8 15 13.5C15 13.2 14.8 13 14.5 13Z" fill="black"/>
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+
                 <p class="message date-warning">Мы не можем отправить вас в прошлое.</p>
-                <label class="search-input-title end-date" for="date-end">
-                  Дата Выезда:
-                </label>
-                <input class="search-input-date end-date-input" name="date-end" id="date-end" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
+                <label class="search-input-title end-date" for="date-end">Дата Выезда:</label>
+
+                <div class="container-end-date">
+                  <input class="search-input-date end-date-input" name="date-end" id="date-end" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
+                  <span class="input-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g>
+                      <path d="M7.75 12C8.05 12 8.25 11.8 8.25 11.5C8.25 11.2 8.05 11 7.75 11C7.45 11 7.25 11.2 7.25 11.5C7.25 11.8 7.45 12 7.75 12Z" fill="black"/>
+                      <path d="M17 4H15V2H14V4H6V2H5V4H3C2.4 4 2 4.4 2 5V16C2 16.5 2.4 17 3 17H17C17.5 17 18 16.5 18 16V5C18 4.4 17.5 4 17 4ZM17 16H3V9H17V16ZM3 8V5H5V7H6V5H14V7H15V5H17V8H3Z" fill="black"/>
+                      <path d="M10 12C10.3 12 10.5 11.8 10.5 11.5C10.5 11.2 10.3 11 10 11C9.7 11 9.5 11.2 9.5 11.5C9.5 11.8 9.7 12 10 12Z" fill="black"/>
+                      <path d="M12.25 12C12.55 12 12.75 11.8 12.75 11.5C12.75 11.2 12.55 11 12.25 11C11.95 11 11.75 11.2 11.75 11.5C11.75 11.8 11.95 12 12.25 12Z" fill="black"/>
+                      <path d="M7.75 13C7.45 13 7.25 13.2 7.25 13.5C7.25 13.8 7.45 14 7.75 14C8.05 14 8.25 13.8 8.25 13.5C8.25 13.2 8.05 13 7.75 13Z" fill="black"/>
+                      <path d="M5.5 12C5.8 12 6 11.8 6 11.5C6 11.2 5.8 11 5.5 11C5.2 11 5 11.2 5 11.5C5 11.8 5.2 12 5.5 12Z" fill="black"/>
+                      <path d="M5.5 13C5.2 13 5 13.2 5 13.5C5 13.8 5.2 14 5.5 14C5.8 14 6 13.8 6 13.5C6 13.2 5.8 13 5.5 13Z" fill="black"/>
+                      <path d="M10 13C9.7 13 9.5 13.2 9.5 13.5C9.5 13.8 9.7 14 10 14C10.3 14 10.5 13.8 10.5 13.5C10.5 13.2 10.3 13 10 13Z" fill="black"/>
+                      <path d="M12.25 13C11.95 13 11.75 13.2 11.75 13.5C11.75 13.8 11.95 14 12.25 14C12.55 14 12.75 13.8 12.75 13.5C12.75 13.2 12.55 13 12.25 13Z" fill="black"/>
+                      <path d="M14.5 12C14.8 12 15 11.8 15 11.5C15 11.2 14.8 11 14.5 11C14.2 11 14 11.2 14 11.5C14 11.8 14.2 12 14.5 12Z" fill="black"/>
+                      <path d="M14.5 13C14.2 13 14 13.2 14 13.5C14 13.8 14.2 14 14.5 14C14.8 14 15 13.8 15 13.5C15 13.2 14.8 13 14.5 13Z" fill="black"/>
+                      </g>
+                    </svg>
+                  </span>
+                </div>
                 <p class="message date-information">На эти даты есть свободные номера. Пока есть.</p>
               </fieldset>
 
@@ -422,9 +461,7 @@
                     <span class="visually-hidden">Описание.</span>
                   </button>
                   <div class="container-tooltip">
-                    <p class="tooltip-text">
-                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-                    </p>
+                    <p class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
                   </div>
 
                   <button class="button-count minus" type="button">
