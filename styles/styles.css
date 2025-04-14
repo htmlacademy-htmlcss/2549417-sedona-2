@@ -55,11 +55,6 @@ input::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-:focus-visible {
-  border-radius: 4px;
-  outline: 3px solid #83b3d3;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -154,11 +149,6 @@ input::-webkit-calendar-picker-indicator {
   transition: background-color 150ms ease-in-out;
 }
 
-.navigation-link:focus:not(.navigation-link-current),
-.navigation-link:hover:not(.navigation-link-current) {
-  background-color: #cccccc;
-}
-
 .navigation-link-current::before {
   position: absolute;
   right: 17px;
@@ -207,11 +197,6 @@ input::-webkit-calendar-picker-indicator {
   -moz-transition: background-color 150ms ease-in-out;
   -o-transition: background-color 150ms ease-in-out;
   transition: background-color 150ms ease-in-out;
-}
-
-.navigation-user-link:focus,
-.navigation-user-link:hover {
-  background-color: #cccccc;
 }
 
 .navigation-search {
@@ -276,6 +261,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .button:focus {
+  outline: none;
   background-color: #615048;
 }
 
@@ -415,7 +401,7 @@ input::-webkit-calendar-picker-indicator {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding: 102px 85px;
+  padding: 102px 50px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -447,7 +433,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .advantages-description-item {
-  width: 230px;
+  width: 250px;
   margin: 0 auto;
   font-size: 18px;
   font-weight: 400;
@@ -852,6 +838,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-checkbox:focus {
+  outline: 3px solid #83b3d3;
   outline-offset: -1px;
 }
 
@@ -874,7 +861,6 @@ input::-webkit-calendar-picker-indicator {
 .control-checkbox:disabled {
   opacity: 30%;
   cursor: default;
-
 }
 
 .control-checkbox:disabled + label {
@@ -913,6 +899,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-radiobutton:focus {
+  outline: 3px solid #83b3d3;
   outline-offset: -1px;
 }
 
@@ -1004,12 +991,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-input:focus {
-  background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
-}
-
-.control-input:hover {
-  background-color: #e6e6e6;
 }
 
 .control-input:disabled {
@@ -1116,6 +1098,11 @@ input::-webkit-calendar-picker-indicator {
 
 .clear-btn:focus {
   background-color: transparent;
+  outline: none;
+}
+
+.clear-btn:focus-visible {
+  background-color: transparent;
   outline: 2px solid #83b3d3;
 }
 
@@ -1128,6 +1115,7 @@ input::-webkit-calendar-picker-indicator {
 .clear-btn:active {
   color: #ffffff;
   background-color: transparent;
+  outline: none;
   opacity: 30%;
 }
 
@@ -1242,7 +1230,6 @@ input::-webkit-calendar-picker-indicator {
   border-color: #83b3d3;
   background-color: #ffffff;
 }
-
 
 .button-sorted:hover,
 .button-sorted:active {
@@ -1517,6 +1504,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .pagination-link:focus {
+  outline: none;
   background-color: #68a2ca;
 }
 
@@ -1614,7 +1602,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .subscription-email {
-  width: 441px;
+  width: 439px;
   padding: 14px 20px;
   font-family: inherit;
   font-size: 18px;
@@ -1625,32 +1613,12 @@ input::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
-.subscription-email:focus {
-  outline: 2px solid #83b3d3;
-  outline-offset: -2px;
-}
-
-.subscription-email:hover {
-  outline: 2px solid #cccccc;
-  outline-offset: -2px;
-}
-
-.subscription-email:not(:placeholder-shown) {
-  outline: 2px solid #ff0000;
-  outline-offset: -2px;
-}
-
-.subscription-email:valid {
-  outline: 2px solid #68a2ca;
-  outline-offset: -2px;
-}
-
 .subscription-email:disabled {
   background-color: #dddddd;
 }
 
 .subscription-button {
-  width: 245px;
+  width: 243px;
   min-height: 52px;
   margin-left: -2px;
   font-size: 20px;
@@ -1661,6 +1629,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .subscription-button:focus {
+  outline: none;
   background-color: #68a2ca;
 }
 
@@ -1748,6 +1717,10 @@ input::-webkit-calendar-picker-indicator {
   height: 40px;
 }
 
+.social-link:focus {
+  outline: none;
+}
+
 .social-link svg {
   fill: #83b3d3
 }
@@ -1796,6 +1769,7 @@ input::-webkit-calendar-picker-indicator {
 .phone:focus,
 .phone:hover {
   color: #756257;
+  outline: none;
 }
 
 .phone:active {
@@ -1807,6 +1781,10 @@ input::-webkit-calendar-picker-indicator {
 .link-htmlacademy {
   width: 115px;
   height: 33px;
+}
+
+.link-htmlacademy:focus {
+  outline: none;
 }
 
 .link-htmlacademy svg {
@@ -1897,13 +1875,19 @@ input::-webkit-calendar-picker-indicator {
   transform: rotate(-45deg);
 }
 
-.modal-close-button:focus-within {
+.modal-close-button:focus {
   border-radius: 50%;
+  background-color: #e5e5e5;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:hover {
+  outline: none;
   background-color: #e5e5e5;
 }
 
-.modal-close-button:hover,
 .modal-close-button:active {
+  outline: none;
   background-color: #e5e5e5;
 }
 
@@ -2101,8 +2085,12 @@ input::-webkit-calendar-picker-indicator {
   transition: background-color 150ms ease-in-out;
 }
 
-.search-input-count:focus {
+.search-input-count:focus-visible {
   outline: 3px solid #83b3d3;
+}
+
+.search-input-count:active {
+  outline: none;
 }
 
 .count-adults {
@@ -2194,7 +2182,7 @@ input::-webkit-calendar-picker-indicator {
   transform: rotate(90deg);
 }
 
-.plus:focus .button-plus {
+.plus:focus-visible .button-plus {
   border-radius: 4px;
   outline: 3px solid #82b3d3;
 }
@@ -2251,7 +2239,7 @@ input::-webkit-calendar-picker-indicator {
   content: "";
 }
 
-.minus:focus .button-minus {
+.minus:focus-visible .button-minus {
   border-radius: 4px;
   outline: 3px solid #82b3d3;
 }
