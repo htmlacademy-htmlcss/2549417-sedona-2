@@ -61,10 +61,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .visually-hidden {
-  /* visibility: hidden;
-  position: absolute;
-  top: -9999px; */
-
   position: absolute;
   width: 1px;
   height: 1px;
@@ -152,10 +148,10 @@ input::-webkit-calendar-picker-indicator {
   line-height: 24px;
   text-decoration: none;
   color: #000000;
-  -webkit-transition: background-color 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 
 .navigation-link:focus:not(.navigation-link-current),
@@ -207,10 +203,10 @@ input::-webkit-calendar-picker-indicator {
   min-width: 44px;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: background-color 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 
 .navigation-user-link:focus,
@@ -273,10 +269,10 @@ input::-webkit-calendar-picker-indicator {
   color: #ffffff;
   background-color: #756257;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border 150ms ease-in-out;
 }
 
 .button:focus {
@@ -574,8 +570,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .housing {
-  /* background-image: url("../images/decoration/housing.svg"); */
-
   position: relative;
 }
 
@@ -590,8 +584,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .food {
-  /* background-image: url("../images/decoration/food.svg"); */
-
   position: relative;
 }
 
@@ -606,8 +598,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .souvenirs {
-  /* background-image: url("../images/decoration/souvenirs.svg"); */
-
   position: relative;
 }
 
@@ -640,7 +630,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 /* блок поиска гостиницы */
-
 .search-hotel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -827,10 +816,10 @@ input::-webkit-calendar-picker-indicator {
   margin-bottom: 16px;
   font-size: 18px;
   line-height: 23px;
-  -webkit-transition: opacity 250ms ease-in-out;
-  -moz-transition: opacity 250ms ease-in-out;
-  -o-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out;
+  -moz-transition: opacity 150ms ease-in-out;
+  -o-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
 }
 
 .control-item:last-child {
@@ -855,6 +844,7 @@ input::-webkit-calendar-picker-indicator {
   appearance: none;
   accent-color: #ffffff;
   background-image: url("../images/decoration/checked-false.svg");
+  cursor: pointer;
 }
 
 .control-checkbox:checked {
@@ -862,7 +852,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-checkbox:focus {
-  /* outline: 3px solid #83b3d3; */
   outline-offset: -1px;
 }
 
@@ -870,7 +859,7 @@ input::-webkit-calendar-picker-indicator {
   opacity: 60%;
 }
 
-.control-checkbox:hover:not(:disabled) + span {
+.control-checkbox:hover:not(:disabled) + label {
   color: rgba(255, 255, 255, 0.6)
 }
 
@@ -878,17 +867,21 @@ input::-webkit-calendar-picker-indicator {
   opacity: 30%;
 }
 
-.control-checkbox:active:not(:disabled) + span {
+.control-checkbox:active:not(:disabled) + label {
   color: rgba(255, 255, 255, 0.3)
 }
 
 .control-checkbox:disabled {
   opacity: 30%;
+  cursor: default;
+
 }
 
-.control-checkbox:disabled + span {
-  color: rgba(255, 255, 255, 0.3)
+.control-checkbox:disabled + label {
+  color: rgba(255, 255, 255, 0.3);
+  cursor: default;
 }
+
 
 /* блок фильтров тип жилья */
 .type-house {
@@ -912,6 +905,7 @@ input::-webkit-calendar-picker-indicator {
   appearance: none;
   accent-color: #000000;
   background-image: url("../images/decoration/radio-false.svg");
+  cursor: pointer;
 }
 
 .control-radiobutton:checked {
@@ -919,7 +913,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-radiobutton:focus {
-  /* outline: 3px solid #83b3d3; */
   outline-offset: -1px;
 }
 
@@ -927,24 +920,26 @@ input::-webkit-calendar-picker-indicator {
   opacity: 60%;
 }
 
-.control-radiobutton:hover:not(:disabled) + span {
-  color: rgba(255, 255, 255, 0.6)
+.control-radiobutton:hover:not(:disabled) + label {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .control-radiobutton:active:not(:disabled) {
   opacity: 30%;
 }
 
-.control-radiobutton:active:not(:disabled) + span {
+.control-radiobutton:active:not(:disabled) + label {
   color: rgba(255, 255, 255, 0.3)
 }
 
 .control-radiobutton:disabled {
   opacity: 30%;
+  cursor: default;
 }
 
-.control-radiobutton:disabled + span {
-  color: rgba(255, 255, 255, 0.3)
+.control-radiobutton:disabled + label {
+  color: rgba(255, 255, 255, 0.3);
+  cursor: default;
 }
 
 /* блок фильтров стоимость */
@@ -1283,7 +1278,6 @@ input::-webkit-calendar-picker-indicator {
 
 
 /* карточки найденных гостиниц */
-
 .card-result-hotel {
   width: 1060px;
   margin-bottom: 39px;
@@ -1328,7 +1322,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .hotel-name {
-  margin: 0 0 15px 0;
+  margin: 0 0 14px 0;
   font-size: 24px;
   font-weight: 700;
   font-style: normal;
@@ -1439,7 +1433,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .star-4::before {
-  width: 91px;
+  width: 90px;
 }
 
 .star-5::before {
@@ -1471,7 +1465,6 @@ input::-webkit-calendar-picker-indicator {
 
 
 /* пагинация */
-
 .pagination-block {
   min-height: 60px;
 }
@@ -1514,10 +1507,10 @@ input::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   color: #ffffff;
   background-color: #83b3d3;
-  -webkit-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1632,12 +1625,13 @@ input::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
-.subscription-email:invalid:not(:focus):placeholder-shown {
-  outline: none;
-}
-
 .subscription-email:focus {
   outline: 2px solid #83b3d3;
+  outline-offset: -2px;
+}
+
+.subscription-email:hover {
+  outline: 2px solid #cccccc;
   outline-offset: -2px;
 }
 
@@ -1793,10 +1787,10 @@ input::-webkit-calendar-picker-indicator {
   font-style: normal;
   text-decoration: none;
   color: #000000;
-  -webkit-transition: color 250ms ease-in-out, opacity 250ms ease-in-out;
-  -moz-transition: color 250ms ease-in-out, opacity 250ms ease-in-out;
-  -o-transition: color 250ms ease-in-out, opacity 250ms ease-in-out;
-  transition: color 250ms ease-in-out, opacity 250ms ease-in-out;
+  -webkit-transition: color 150ms ease-in-out, opacity 150ms ease-in-out;
+  -moz-transition: color 150ms ease-in-out, opacity 150ms ease-in-out;
+  -o-transition: color 150ms ease-in-out, opacity 150ms ease-in-out;
+  transition: color 150ms ease-in-out, opacity 150ms ease-in-out;
 }
 
 .phone:focus,
@@ -1827,7 +1821,6 @@ input::-webkit-calendar-picker-indicator {
 .link-htmlacademy:active svg {
   fill: rgba(117, 97, 87, 0.3);
 }
-
 
 /* окно модальной формы */
 .container-modal-form {
@@ -1871,10 +1864,10 @@ input::-webkit-calendar-picker-indicator {
   border-radius: 50%;
   background-color: #f2f2f2;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 
 .modal-close-button:before,
@@ -1907,7 +1900,6 @@ input::-webkit-calendar-picker-indicator {
 .modal-close-button:focus-within {
   border-radius: 50%;
   background-color: #e5e5e5;
-  /* outline: 3px solid #82b3d3; */
 }
 
 .modal-close-button:hover,
@@ -1996,7 +1988,7 @@ input::-webkit-calendar-picker-indicator {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 
 .search-input-date:focus {
@@ -2106,7 +2098,7 @@ input::-webkit-calendar-picker-indicator {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 0;
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 
 .search-input-count:focus {
@@ -2293,26 +2285,26 @@ input::-webkit-calendar-picker-indicator {
 .tooltip:focus {
   background-color: #68a2ca;
   outline: none;
-  -webkit-transition: background-color 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 
 .tooltip:hover {
   background-color: #68a2ca;
-  -webkit-transition: background-color 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 
 .tooltip:active {
   background-color: #68a2ca;
-  -webkit-transition: background-color 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
 
 .tooltip:focus + .container-tooltip,
@@ -2327,7 +2319,6 @@ input::-webkit-calendar-picker-indicator {
   top: 51px;
   display: none;
   width: 256px;
-  min-height: 143px;
   margin: 0;
   padding: 21px 18px 18px 23px;
   border-radius: 10px;
@@ -2384,10 +2375,10 @@ input::-webkit-calendar-picker-indicator {
   color: #ffffff;
   background-color: #83b3d3;
   cursor: pointer;
-  -webkit-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-  -moz-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-  -o-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  -webkit-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 }
 
 .search-hotel-to-free-date:focus {
