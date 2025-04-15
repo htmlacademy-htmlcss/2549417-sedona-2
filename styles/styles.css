@@ -837,7 +837,7 @@ input::-webkit-calendar-picker-indicator {
   background-image: url("../images/decoration/checked-true.svg");
 }
 
-.control-checkbox:focus {
+.control-checkbox:focus-visible {
   outline: 3px solid #83b3d3;
   outline-offset: -1px;
 }
@@ -851,6 +851,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-checkbox:active:not(:disabled) {
+  outline: none;
   opacity: 30%;
 }
 
@@ -898,7 +899,7 @@ input::-webkit-calendar-picker-indicator {
   background-image: url("../images/decoration/radio-true.svg");
 }
 
-.control-radiobutton:focus {
+.control-radiobutton:focus-visible {
   outline: 3px solid #83b3d3;
   outline-offset: -1px;
 }
@@ -912,6 +913,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-radiobutton:active:not(:disabled) {
+  outline: none;
   opacity: 30%;
 }
 
@@ -992,6 +994,10 @@ input::-webkit-calendar-picker-indicator {
 
 .control-input:focus {
   outline: 3px solid #83b3d3;
+}
+
+.control-input:hover {
+  background-color: #e5e5e5;
 }
 
 .control-input:disabled {
