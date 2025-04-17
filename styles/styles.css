@@ -419,7 +419,7 @@ input::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
-.advantages-title-item:after {
+.advantages-title-item::after {
   display: block;
   width: 60px;
   height: 2px;
@@ -428,7 +428,7 @@ input::-webkit-calendar-picker-indicator {
   content: "";
 }
 
-.item-night .advantages-title-item:after {
+.item-night .advantages-title-item::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -646,6 +646,7 @@ input::-webkit-calendar-picker-indicator {
   font-style: normal;
   line-height: 26px;
   text-align: center;
+  color: #333333;
 }
 
 .search-hotel-button {
@@ -741,6 +742,7 @@ input::-webkit-calendar-picker-indicator {
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
+  cursor: default;
 }
 
 .breadcrumbs-catalog:focus {
@@ -847,7 +849,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-checkbox:hover:not(:disabled) + label {
-  color: rgba(255, 255, 255, 0.6)
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .control-checkbox:active:not(:disabled) {
@@ -856,7 +858,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-checkbox:active:not(:disabled) + label {
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .control-checkbox:disabled {
@@ -918,7 +920,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .control-radiobutton:active:not(:disabled) + label {
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .control-radiobutton:disabled {
@@ -1058,6 +1060,10 @@ input::-webkit-calendar-picker-indicator {
 
 .control-button:focus {
   outline: 3px solid #83b3d3;
+}
+
+.control-button:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .control-button:active {
@@ -1290,6 +1296,7 @@ input::-webkit-calendar-picker-indicator {
   padding: 0;
   list-style: none;
   word-break: break-word;
+  color: #333333;
 }
 
 .hotel-card-item {
@@ -1600,6 +1607,10 @@ input::-webkit-calendar-picker-indicator {
   line-height: 26px;
 }
 
+.description-color {
+  color: #333333;
+}
+
 .input-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1617,6 +1628,11 @@ input::-webkit-calendar-picker-indicator {
   border-radius: 4px 0 0 4px;
   background-color: #f2f2f2;
   outline: none;
+}
+
+.subscription-email:focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
 }
 
 .subscription-email:disabled {
@@ -1728,7 +1744,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .social-link svg {
-  fill: #83b3d3
+  fill: #83b3d3;
 }
 
 .social-link:focus svg,
@@ -1747,9 +1763,9 @@ input::-webkit-calendar-picker-indicator {
 
 /* номер телефона */
 .contacts {
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1854,8 +1870,8 @@ input::-webkit-calendar-picker-indicator {
   transition: background-color 150ms ease-in-out;
 }
 
-.modal-close-button:before,
-.modal-close-button:after {
+.modal-close-button::before,
+.modal-close-button::after {
   position: absolute;
   top: 49%;
   left: 32%;
@@ -1865,7 +1881,7 @@ input::-webkit-calendar-picker-indicator {
   content: "";
 }
 
-.modal-close-button:before {
+.modal-close-button::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -1873,7 +1889,7 @@ input::-webkit-calendar-picker-indicator {
   transform: rotate(45deg);
 }
 
-.modal-close-button:after {
+.modal-close-button::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
@@ -2044,6 +2060,7 @@ input::-webkit-calendar-picker-indicator {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
+  color: #333333;
 }
 
 .message {
@@ -2058,9 +2075,9 @@ input::-webkit-calendar-picker-indicator {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 247px 88px 242px;
-  grid-template-columns: 247px 88px 242px;;
-  -ms-grid-column: 1;;
-  -ms-grid-column-span: 3;;
+  grid-template-columns: 247px 88px 242px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-column: 1/4;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -2171,7 +2188,7 @@ input::-webkit-calendar-picker-indicator {
 .button-plus::after,
 .button-plus::before {
   position: absolute;
-  left:3px;
+  left: 3px;
   top: 45%;
   width: 14px;
   height: 2px;
@@ -2236,7 +2253,7 @@ input::-webkit-calendar-picker-indicator {
 
 .button-minus::after {
   position: absolute;
-  left:3px;
+  left: 3px;
   top: 45%;
   width: 14px;
   height: 2px;
